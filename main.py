@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
     return f"Bot: {TOKEN}"
 
-@app.route("/set", methods=["GET"])
+@app.route("/set/", methods=["GET"])
 def set_webhook():
     url = "https://backend2023f.pythonanywhere.com/webhook"
     bot = telegram.Bot(token=TOKEN)
