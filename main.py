@@ -20,5 +20,6 @@ def home():
         r = requests.post(URL, json=payload)
 
         print(r.json())
+        return "OK"
     else:
         return "Not allowed GET request!"
