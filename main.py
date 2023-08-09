@@ -8,8 +8,8 @@ app = Flask(__name__)
 def index():
     return f"Bot: {TOKEN}"
 
-@app.route("/webhook", methods=["POST"])
-def main():
+@app.route("/webhook", methods=["POST", "GET"])
+def home():
     if request.method == "POST":
         chat_id = 5575549228
         payload = {
@@ -20,5 +20,5 @@ def main():
         r = requests.post(URL, json=payload)
 
         print(r.json())
-        
-        return "OK"
+    else:
+        return "Not allowed GET request!"
