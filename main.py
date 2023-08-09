@@ -7,3 +7,8 @@ app = Flask(__name__)
 def index():
     return f"Bot: {TOKEN}"
 
+@app.route("/webhook/", methods=["POST"])
+def main():
+    if request.method == "POST":
+        print(request.get_json(force=True))
+        return "OK"
