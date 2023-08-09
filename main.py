@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return f"Bot: {TOKEN}"
 
-@app.route("/webhook/", methods=["POST"])
+@app.route("/webhook", methods=["POST"])
 def main():
     if request.method == "POST":
         chat_id = 5575549228
