@@ -3,8 +3,8 @@ import telegram
 import os 
 
 url = "https://backend2023f.pythonanywhere.com/webhook/"
-
-TOKEN = "5959656588:AAFRUBI1vozVI4ScI9HCVu3YRk2qd_6PjxQ"
+# "5959656588:AAFRUBI1vozVI4ScI9HCVu3YRk2qd_6PjxQ"
+TOKEN = "6217675093:AAFKzEEhkFi-nQqkrk7LTyyBgIyww7d8UtQ"
 
 bot = telegram.Bot(token=TOKEN)
 
