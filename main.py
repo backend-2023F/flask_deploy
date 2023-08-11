@@ -5,14 +5,7 @@ import telegram
 TOKEN = "5959656588:AAFRUBI1vozVI4ScI9HCVu3YRk2qd_6PjxQ"
 app = Flask(__name__)
 
-@app.route("/set/", methods=["GET"])
-def set_webhook():
-    url = "https://backend2023f.pythonanywhere.com/webhook"
-    bot = telegram.Bot(token=TOKEN)
-    bot.delete_webhook()
-    return bot.set_webhook(url)
-
-@app.route("/", methods=["POST", "GET"])
+@app.route("/webhook/", methods=["POST", "GET"])
 def home():
     if request.method == "POST":
         chat_id = 5575549228
@@ -27,3 +20,12 @@ def home():
         return "OK"
     else:
         return "Not allowed GET request!"
+
+@app.route("/arg/<number>", methods=["GET"])
+def arg(number):
+    print(type(number))
+    return f"Number is {number}"
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
