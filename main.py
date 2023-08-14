@@ -11,10 +11,12 @@ def home():
     if request.method == "POST":
         data = request.get_json()
         print(data)
-        chat_id = 5575549228
+        chat_id = data['message']['chat']['id']
+        text = data['message']['text']
+
         payload = {
             "chat_id": chat_id,
-            "text": "Hello World"
+            "text": text
         }
 
         URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
