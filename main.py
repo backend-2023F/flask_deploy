@@ -9,6 +9,8 @@ app = Flask(__name__)
 def home():
     
     if request.method == "POST":
+        data = request.get_json()
+        print(data)
         chat_id = 5575549228
         payload = {
             "chat_id": chat_id,
