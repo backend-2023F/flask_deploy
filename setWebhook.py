@@ -8,7 +8,7 @@ TOKEN = "6217675093:AAFKzEEhkFi-nQqkrk7LTyyBgIyww7d8UtQ"
 
 bot = telegram.Bot(token=TOKEN)
 
-bot.delete_webhook()
-print(bot.set_webhook(url))
+# bot.delete_webhook()
+# print(bot.set_webhook(url))
 
 print(bot.get_webhook_info())
